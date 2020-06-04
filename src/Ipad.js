@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import ScrollableAnchor from "react-scrollable-anchor";
 import Ishallbe from "./ishallbe_m";
 import Repudiation from "./repudiation_m";
 import Power from "./power_m";
@@ -237,53 +237,26 @@ const Ipad = () => {
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <Link
-                    activeClass="active"
-                    to="projects"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    Projects
-                  </Link>
+                  <a href="#projects">Projects</a>
                 </MenuItem>
 
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <Link
-                    activeClass="active"
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    About
-                  </Link>
+                  <a href="#about">About</a>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <Link
-                    activeClass="active"
-                    to="credits"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                  >
-                    Credits
-                  </Link>
+                  <a href="#credits">Credits</a>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink href="#contact">Contact</AnchorLink>
+                  <a href="#contact">Contact</a>
                 </MenuItem>
               </Menu>
             </Toolbar>
@@ -303,14 +276,7 @@ const Ipad = () => {
               </div>
             </Box>
 
-            <Link
-              activeClass="active"
-              to="projects"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
+            <a href="#projects">
               <Button
                 color="primary"
                 variant="contained"
@@ -320,91 +286,87 @@ const Ipad = () => {
               >
                 Projects
               </Button>
-            </Link>
-          </div>
-          <Container></Container>
-          <div className={classes.containers}>
-            <Container>
-              <div
-                className={classes.mainHeading}
-                id="projects"
-                name="projects"
-              >
-                Projects
-              </div>
-            </Container>
-            <Paper className={classes.projectsDivider} elevation={0}>
-              <div>
-                <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>Feature Films</div>
-              </div>
-            </Paper>
-            <Container>
-              <Ishallbe />
-              <Repudiation />
-            </Container>
-            <Paper className={classes.projectsDivider} elevation={0}>
-              <div>
-                <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
-                  Mini series ( 4 episodes)
+            </a>
+
+            <div className={classes.containers}>
+              <Container>
+                <ScrollableAnchor id={"projects"}>
+                  <div className={classes.mainHeading}>Projects</div>
+                </ScrollableAnchor>
+              </Container>
+              <Paper className={classes.projectsDivider} elevation={0}>
+                <div>
+                  <StarIcon className={classes.iconbutton} aria-label="icon" />
+                  <div className={classes.projectsTitle}>Feature Films</div>
                 </div>
-              </div>
-            </Paper>
-            <Container>
-              <Power />
-            </Container>
-            <Paper className={classes.projectsDivider} elevation={0}>
-              <div>
-                <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
-                  Documentary series (13 episodes)
+              </Paper>
+              <Container>
+                <Ishallbe />
+                <Repudiation />
+              </Container>
+              <Paper className={classes.projectsDivider} elevation={0}>
+                <div>
+                  <StarIcon className={classes.iconbutton} aria-label="icon" />
+                  <div className={classes.projectsTitle}>
+                    Mini series ( 4 episodes)
+                  </div>
                 </div>
-              </div>
-            </Paper>
-            <Container>
-              <European />
-            </Container>
-            <Paper className={classes.projectsDivider} elevation={0}>
-              <div>
-                <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
-                  Childrens' series (6 episodes)
+              </Paper>
+              <Container>
+                <Power />
+              </Container>
+              <Paper className={classes.projectsDivider} elevation={0}>
+                <div>
+                  <StarIcon className={classes.iconbutton} aria-label="icon" />
+                  <div className={classes.projectsTitle}>
+                    Documentary series (13 episodes)
+                  </div>
                 </div>
-              </div>
-            </Paper>
-            <Container>
-              <Teddy />
-            </Container>
+              </Paper>
+              <Container>
+                <European />
+              </Container>
+              <Paper className={classes.projectsDivider} elevation={0}>
+                <div>
+                  <StarIcon className={classes.iconbutton} aria-label="icon" />
+                  <div className={classes.projectsTitle}>
+                    Childrens' series (6 episodes)
+                  </div>
+                </div>
+              </Paper>
+              <Container>
+                <Teddy />
+              </Container>
 
-            <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading} id="about" name="about">
-                About
-              </div>
-            </Container>
-            <Container>
-              <Trisha />
-            </Container>
+              <Container className={classes.mainHeading}>
+                <ScrollableAnchor id={"about"}>
+                  <div className={classes.mainHeading}>About</div>
+                </ScrollableAnchor>
+              </Container>
+              <Container>
+                <Trisha />
+              </Container>
 
-            <Container>
-              <div className={classes.mainHeading} id="credits" name="credits">
-                Credits
-              </div>
-            </Container>
-            <Container>
-              <Credits />
-            </Container>
+              <Container>
+                <ScrollableAnchor id={"credits"}>
+                  <div className={classes.mainHeading}>Credits</div>
+                </ScrollableAnchor>
+              </Container>
+              <Container>
+                <Credits />
+              </Container>
 
-            <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading} id="contact" name="contact">
-                Contact
-              </div>
-            </Container>
+              <Container className={classes.mainHeading}>
+                <ScrollableAnchor id={"contact"}>
+                  <div className={classes.mainHeading}>Contact</div>
+                </ScrollableAnchor>
+              </Container>
 
-            <Container>
-              <Contact />
-            </Container>
-            <Footer />
+              <Container>
+                <Contact />
+              </Container>
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

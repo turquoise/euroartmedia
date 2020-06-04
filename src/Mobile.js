@@ -1,5 +1,6 @@
 import React from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { animateScroll as scroll } from "react-scroll";
+import ScrollableAnchor from "react-scrollable-anchor";
 import Ishallbe from "./ishallbe_s";
 import Repudiation from "./repudiation_s";
 import Power from "./power_s";
@@ -213,6 +214,9 @@ const Mobile = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
   return (
     <ThemeProvider theme={theme}>
       <div id="mobile">
@@ -231,7 +235,12 @@ const Mobile = () => {
               </IconButton>
               <div>
                 <Box>
-                  <img src={logo} className={classes.logo} alt="EuroArt Logo" />
+                  <img
+                    src={logo}
+                    className={classes.logo}
+                    alt="EuroArt Logo"
+                    onClick={scrollToTop}
+                  />
                 </Box>
               </div>
               <Menu
@@ -245,25 +254,25 @@ const Mobile = () => {
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink href="#projects">Projects</AnchorLink>
+                  <a href="#project">Projects</a>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink href="#about">About</AnchorLink>
+                  <a href="#about">About</a>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink href="#credits">Credits</AnchorLink>
+                  <a href="#credits">Credits</a>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink href="#contact">Contact</AnchorLink>
+                  <a href="#contact">Contact</a>
                 </MenuItem>
               </Menu>
             </Toolbar>
@@ -283,7 +292,7 @@ const Mobile = () => {
               </div>
             </Box>
 
-            <AnchorLink href="#projects">
+            <a href="#project">
               <Button
                 color="primary"
                 variant="contained"
@@ -293,14 +302,14 @@ const Mobile = () => {
               >
                 Projects
               </Button>
-            </AnchorLink>
+            </a>
           </div>
           <Container></Container>
           <div className={classes.containers}>
             <Container>
-              <div className={classes.mainHeading} id="projects">
-                Projects
-              </div>
+              <ScrollableAnchor id={"project"}>
+                <div className={classes.mainHeading}>Projects</div>
+              </ScrollableAnchor>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
@@ -347,27 +356,27 @@ const Mobile = () => {
             </Container>
             <div id="about"></div>
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading} id="about">
-                About
-              </div>
+              <ScrollableAnchor id={"about"}>
+                <div className={classes.mainHeading}>About</div>
+              </ScrollableAnchor>
             </Container>
             <Container>
               <Trisha />
             </Container>
             <div id="credits"></div>
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading} id="credits">
-                Credits
-              </div>
+              <ScrollableAnchor id={"credits"}>
+                <div className={classes.mainHeading}>Credits</div>
+              </ScrollableAnchor>
             </Container>
             <Container>
               <Credits />
             </Container>
             <div id="contact"></div>
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading} id="contact">
-                Contact
-              </div>
+              <ScrollableAnchor id={"contact"}>
+                <div className={classes.mainHeading}>Contact</div>
+              </ScrollableAnchor>
             </Container>
 
             <Container>
