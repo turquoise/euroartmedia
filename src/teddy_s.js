@@ -11,6 +11,10 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Button from "@material-ui/core/Button";
 import image from "./images/teddy_sm.png";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+
+import "./App.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,10 +85,11 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     position: "relative",
     top: "15px",
-    left: "15px",
+    left: "0px",
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
+    textAlign: "left",
   },
   media: {
     position: "relative",
@@ -100,9 +105,9 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     fontFamily: "roboto",
-    marginBottom: "0px",
     position: "relative",
     top: "-30px",
+    textAlign: "left",
   },
 }));
 
@@ -120,38 +125,46 @@ const Teddy = () => {
         <Typography variant="h6">TEDDY TALES</Typography>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Co-Producer and Editor
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Paddy Payne
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Animation
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Cadi Catlow
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Co-Producer and Editor
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Paddy Payne
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Animation
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Cadi Catlow
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
       </CardContent>
       <CardContent>
         <Paper className={classes.cardImage} elevation={5}>
@@ -160,15 +173,15 @@ const Teddy = () => {
       </CardContent>
       <CardContent>
         <CardMedia className={classes.media} title="repudiation trailer">
-          <div class="video-responsive">
+          <div className="video-responsive">
             <iframe
               width="320"
               height="240"
               title="Teddy Tales"
               src="https://www.youtube.com/embed/8P0iM6ZYO_o"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </CardMedia>

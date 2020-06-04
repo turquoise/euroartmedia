@@ -82,10 +82,16 @@ const useStyles = makeStyles((theme) => ({
     width: "200px",
     height: "270px",
     top: "15px",
-    left: "15px",
+    left: "0px",
   },
   cardcontent: {
     backgroundColor: "white",
+    textAlign: "left",
+  },
+  typography: {
+    fontFamily: "roboto",
+    position: "relative",
+    textAlign: "left",
   },
 }));
 
@@ -107,11 +113,11 @@ const Trisha = () => {
       <Paper className={classes.cardImage} elevation={5}>
         <img src={image} className={classes.image} alt="Trisha Clarke" />
       </Paper>
-      <CardContent>
-        <Typography>
+      <CardContent className={classes.typography}>
+        <p>
           Trisha Clarke founded EuroArtMedia in order to produce documentaries
           and mini series that are filmed internationally.
-        </Typography>
+        </p>
       </CardContent>
       <CardActions disableSpacing>
         <Button

@@ -1,14 +1,13 @@
 import React from "react";
 import Mobile from "./Mobile";
+import Ipad from "./Ipad";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Mobile />
-      <p className="test" id="ipad">
-        EUROART IPAD
-      </p>
+      <Ipad />
       <p className="test" id="ipadpro">
         EUROART IPADPRO
       </p>

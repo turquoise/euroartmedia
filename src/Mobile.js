@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "1",
-    top: "220px",
+    top: "200px",
     left: "50%",
     marginLeft: "-50px",
   },
@@ -102,7 +102,8 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "-1",
     backgroundColor: "white",
     width: "100%",
-    borderBottom: "18px solid #cd5c5c",
+    height: "auto",
+    borderBottom: "15px solid #cd5c5c",
   },
   euroart: {
     position: "absolute",
@@ -117,9 +118,9 @@ const useStyles = makeStyles((theme) => ({
   taglinetext: {
     position: "absolute",
     zIndex: "5",
-    color: "black",
+    color: "white",
     fontSize: "18px",
-    top: "110px",
+    top: "130px",
     left: "50%",
     marginLeft: "-150px",
     textAlign: "center",
@@ -127,11 +128,12 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     fontFamily: "KronaOne",
     lineHeight: "1.4",
+    textShadow: "1px 1px black",
   },
   mainHeading: {
     textAlign: "center",
     fontFamily: "KronaOne",
-    fontSize: "20px",
+    fontSize: "18px",
     marginBottom: "15px",
     marginTop: "5px",
     color: "#133B4D",
@@ -146,21 +148,47 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "30px",
   },
-  projectsTitle: {
-    marginTop: "-30px",
-    marginLeft: "50px",
-    fontSize: "16px",
+  projectsTitle1: {
+    position: "relative",
+    top: "-22px",
+    left: "-75px",
+    fontSize: "12px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle2: {
+    position: "relative",
+    top: "-22px",
+    left: "-35px",
+    fontSize: "12px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle3: {
+    position: "relative",
+    top: "-22px",
+    left: "5px",
+    fontSize: "12px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle4: {
+    position: "relative",
+    top: "-22px",
+    left: "-10px",
+    fontSize: "12px",
     fontFamily: "KronaOne",
     color: "#133B4D",
   },
   iconbutton: {
-    marginLeft: "15px",
-    marginTop: "3px",
+    position: "relative",
+    left: "-150px",
+    top: "3px",
     color: "#cd5c5c",
   },
   containers: {
     position: "relative",
-    top: "30px",
+    top: "50px",
   },
   contactphoto: {
     position: "relative",
@@ -277,7 +305,7 @@ const Mobile = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>Feature Films</div>
+                <div className={classes.projectsTitle1}>Feature Films</div>
               </div>
             </Paper>
             <Container>
@@ -287,7 +315,7 @@ const Mobile = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle2}>
                   Mini series ( 4 episodes)
                 </div>
               </div>
@@ -298,7 +326,7 @@ const Mobile = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle3}>
                   Documentary series (13 episodes)
                 </div>
               </div>
@@ -309,7 +337,7 @@ const Mobile = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle4}>
                   Childrens' series (6 episodes)
                 </div>
               </div>

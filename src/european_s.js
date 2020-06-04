@@ -10,6 +10,8 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Button from "@material-ui/core/Button";
 import image from "./images/european_sm.png";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,15 +46,20 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     position: "relative",
     top: "15px",
-    left: "15px",
+    left: "0px",
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
+    textAlign: "left",
   },
   credits: {
     fontFamily: "roboto",
     fontSize: "14px",
     color: "#133B4D",
+  },
+  typography: {
+    fontFamily: "roboto",
+    textAlign: "left",
   },
 }));
 
@@ -70,47 +77,55 @@ const European = () => {
         <Typography variant="h6">EUROPEAN CAFES</Typography>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Line Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Kate Dain
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Presenters
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Georgio Locatelli and Ulrika Jonsson
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Line Producer
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Kate Dain
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Presenters
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Georgio Locatelli and Ulrika Jonsson
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
       </CardContent>
       <Paper className={classes.cardImage} elevation={5}>
         <img src={image} className={classes.image} alt="European Cafe" />
       </Paper>
-      <CardContent>
-        <Typography>
+      <CardContent className={classes.typography}>
+        <p>
           A documentary series with 13 episodes exploring the history and
           culture of the most enchanting European cafes.
-        </Typography>
+        </p>
       </CardContent>
       <CardActions disableSpacing>
         <Button

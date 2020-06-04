@@ -19,7 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   contactphoto: {
     position: "relative",
-    width: "auto",
+    width: "100%",
+    height: "auto",
   },
 }));
 
@@ -29,8 +30,12 @@ const Contact = () => {
   return (
     <Card>
       <CardContent>
-        <Paper className={classes.contactphoto} elevation={0}>
-          <img src={contactimage} alt="Bath Canal" />
+        <Paper elevation={0}>
+          <img
+            src={contactimage}
+            alt="Bath Canal"
+            className={classes.contactphoto}
+          />
         </Paper>
       </CardContent>
       <CardContent>

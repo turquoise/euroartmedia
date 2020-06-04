@@ -10,6 +10,8 @@ import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import Button from "@material-ui/core/Button";
 import image from "./images/power_sm.png";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -83,15 +85,20 @@ const useStyles = makeStyles((theme) => ({
     height: "200px",
     position: "relative",
     top: "15px",
-    left: "15px",
+    left: "0px",
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
+    textAlign: "left",
   },
   credits: {
     fontFamily: "roboto",
     fontSize: "14px",
     color: "#133B4D",
+  },
+  typography: {
+    fontFamily: "roboto",
+    textAlign: "left",
   },
 }));
 
@@ -109,48 +116,56 @@ const Power = () => {
         <Typography variant="h6">THE IMPOTENCE OF POWER</Typography>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Script
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Keith Lindsay
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Original book written by
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Anthony Rawstron
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Script
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Keith Lindsay
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Original book written by
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Anthony Rawstron
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
       </CardContent>
       <Paper className={classes.cardImage} elevation={5}>
         <img src={image} className={classes.image} alt="Large house" />
       </Paper>
-      <CardContent>
-        <Typography>
+      <CardContent className={classes.typography}>
+        <p>
           In business and in politics a person's power is thought to broaden
           with every upward step they take, but in reality they become more
           dependent on others. A mini series about a powerful family.
-        </Typography>
+        </p>
       </CardContent>
       <CardActions disableSpacing>
         <Button

@@ -1,5 +1,6 @@
 import React from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link, animateScroll as scroll } from "react-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import Ishallbe from "./ishallbe_m";
 import Repudiation from "./repudiation_m";
 import Power from "./power_m";
@@ -23,7 +24,7 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import Footer from "./footer_m";
-import "./styles.scss";
+
 import {
   createMuiTheme,
   makeStyles,
@@ -111,26 +112,27 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-150px",
     zIndex: "1",
     fontSize: "64px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     color: "#59b",
   },
   taglinetext: {
     position: "absolute",
     zIndex: "5",
-    color: "black",
+    color: "white",
     fontSize: "30px",
-    top: "160px",
+    top: "200px",
     left: "50%",
     marginLeft: "-250px",
     textAlign: "center",
     width: "500px",
     height: "80px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     lineHeight: "1.4",
+    textShadow: "2px 2px black",
   },
   mainHeading: {
     textAlign: "center",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "30px",
     marginBottom: "15px",
     marginTop: "5px",
@@ -150,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-38px",
     marginLeft: "60px",
     fontSize: "22px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     color: "#133B4D",
   },
   iconbutton: {
@@ -169,8 +171,17 @@ const useStyles = makeStyles((theme) => ({
     left: "0px",
   },
   pulldownmenu: {
-    fontFamily: "Krona One",
-    fontSize: "20px",
+    fontFamily: "KronaOne",
+    fontSize: "22px",
+  },
+  contact: {
+    textAlign: "center",
+    fontFamily: "KronaOne",
+    fontSize: "30px",
+    marginBottom: "15px",
+    marginTop: "5px",
+    color: "#133B4D",
+    paddingTop: "20px",
   },
 }));
 
@@ -185,6 +196,9 @@ const Ipad = () => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const scrollToTop = () => {
+    scroll.scrollToTop();
   };
   return (
     <ThemeProvider theme={theme}>
@@ -204,7 +218,12 @@ const Ipad = () => {
               </IconButton>
               <div>
                 <Box>
-                  <img src={logo} className={classes.logo} alt="EuroArt logo" />
+                  <img
+                    src={logo}
+                    className={classes.logo}
+                    alt="EuroArt logo"
+                    onClick={scrollToTop}
+                  />
                 </Box>
               </div>
               <Menu
@@ -218,34 +237,53 @@ const Ipad = () => {
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink to="/ipad#projects" title="Projects">
+                  <Link
+                    activeClass="active"
+                    to="projects"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
                     Projects
-                  </AnchorLink>
+                  </Link>
                 </MenuItem>
 
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink to="/ipad#about" title="About">
+                  <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
                     About
-                  </AnchorLink>
+                  </Link>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink to="/ipad#credits" title="Credits">
+                  <Link
+                    activeClass="active"
+                    to="credits"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
                     Credits
-                  </AnchorLink>
+                  </Link>
                 </MenuItem>
                 <MenuItem
                   onClick={handleClose}
                   className={classes.pulldownmenu}
                 >
-                  <AnchorLink to="/ipad#contact" title="Contact">
-                    Contact
-                  </AnchorLink>
+                  <AnchorLink href="#contact">Contact</AnchorLink>
                 </MenuItem>
               </Menu>
             </Toolbar>
@@ -265,7 +303,14 @@ const Ipad = () => {
               </div>
             </Box>
 
-            <AnchorLink to="/ipad#projects" title="Projects">
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <Button
                 color="primary"
                 variant="contained"
@@ -275,13 +320,18 @@ const Ipad = () => {
               >
                 Projects
               </Button>
-            </AnchorLink>
+            </Link>
           </div>
           <Container></Container>
           <div className={classes.containers}>
-            <div id="projects"></div>
             <Container>
-              <div className={classes.mainHeading}>Projects</div>
+              <div
+                className={classes.mainHeading}
+                id="projects"
+                name="projects"
+              >
+                Projects
+              </div>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
@@ -326,23 +376,29 @@ const Ipad = () => {
             <Container>
               <Teddy />
             </Container>
-            <div id="about"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>About</div>
+              <div className={classes.mainHeading} id="about" name="about">
+                About
+              </div>
             </Container>
             <Container>
               <Trisha />
             </Container>
-            <div id="credits"></div>
+
             <Container>
-              <div className={classes.mainHeading}>Credits</div>
+              <div className={classes.mainHeading} id="credits" name="credits">
+                Credits
+              </div>
             </Container>
             <Container>
               <Credits />
             </Container>
-            <div id="contact"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>Contact</div>
+              <div className={classes.mainHeading} id="contact" name="contact">
+                Contact
+              </div>
             </Container>
 
             <Container>
