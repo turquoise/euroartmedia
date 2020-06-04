@@ -1,5 +1,5 @@
 import React from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 import Ishallbe from "./ishallbe_xl";
 import Repudiation from "./repudiation_xl";
 import Power from "./power_xl";
@@ -20,7 +20,6 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
-import "./styles.scss";
 import {
   createMuiTheme,
   makeStyles,
@@ -61,16 +60,6 @@ const useStyles = makeStyles((theme) => ({
   textexpandopen: {
     marginLeft: "auto",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
   card: {
     backgroundColor: "white",
     color: "black",
@@ -103,33 +92,34 @@ const useStyles = makeStyles((theme) => ({
   },
   euroart: {
     position: "absolute",
-    top: "170px",
+    top: "110px",
     left: "50%",
     marginLeft: "-280px",
     zIndex: "1",
     fontSize: "120px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     letterSpacing: "2px",
     color: "#59b",
   },
   taglinetext: {
     position: "absolute",
     zIndex: "5",
-    color: "black",
+    color: "white",
     fontSize: "40px",
-    top: "240px",
+    top: "260px",
     left: "50%",
     marginLeft: "-380px",
     textAlign: "center",
     lineHeight: "1.4",
     width: "800px",
     height: "500px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
+    textShadow: "2px 2px black",
   },
   mainHeading: {
     textAlign: "center",
-    fontFamily: "Krona One",
-    fontSize: "32px",
+    fontFamily: "KronaOne",
+    fontSize: "30px",
     marginBottom: "40px",
     marginTop: "5px",
     color: "#133B4D",
@@ -144,16 +134,41 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "40px",
   },
-  projectsTitle: {
-    marginTop: "-38px",
-    marginLeft: "90px",
-    fontSize: "24px",
-    fontFamily: "Krona One",
+  projectsTitle1: {
+    position: "relative",
+    top: "-35px",
+    left: "-440px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle2: {
+    position: "relative",
+    top: "-35px",
+    left: "-360px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle3: {
+    position: "relative",
+    top: "-35px",
+    left: "-280px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle4: {
+    position: "relative",
+    top: "-35px",
+    left: "-320px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
     color: "#133B4D",
   },
   iconbutton: {
-    marginLeft: "40px",
-    marginTop: "3px",
+    position: "relative",
+    left: "-580px",
     color: "#cd5c5c",
     fontSize: "36px",
   },
@@ -168,41 +183,41 @@ const useStyles = makeStyles((theme) => ({
     left: "0px",
   },
   pulldownmenu: {
-    fontFamily: "Rubik",
+    fontFamily: "KronaOne",
     fontSize: "24px",
   },
   anchorlink1: {
     position: "relative",
-    fontFamily: "Krona One",
-    fontSize: "18px",
-    top: "10px",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
     left: "20px",
   },
   anchorlink2: {
     position: "relative",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "18px",
-    top: "10px",
     left: "60px",
   },
   anchorlink3: {
     position: "relative",
-    fontFamily: "Krona One",
-    fontSize: "18px",
-    top: "10px",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
     left: "100px",
   },
   anchorlink4: {
     position: "relative",
-    fontFamily: "Krona One",
-    fontSize: "18px",
-    top: "10px",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
     left: "140px",
   },
 }));
 
 const Laptop = () => {
   const classes = useStyles();
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -212,28 +227,48 @@ const Laptop = () => {
             <Toolbar>
               <div>
                 <Box>
-                  <img src={logo} className={classes.logo} alt="EuroArt logo" />
+                  <img
+                    src={logo}
+                    className={classes.logo}
+                    alt="EuroArt logo"
+                    onClick={scrollToTop}
+                  />
                 </Box>
               </div>
-              <div>
-                <AnchorLink to="/laptop#projects" title="Projects">
-                  <p className={classes.anchorlink1}>Projects</p>
-                </AnchorLink>
+              <div className={classes.anchorlink1}>
+                <Link
+                  to="projects_laptop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Projects
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/laptop#about" title="About">
-                  <p className={classes.anchorlink2}>About</p>
-                </AnchorLink>
+              <div className={classes.anchorlink2}>
+                <Link to="about_laptop" spy={true} smooth={true} duration={500}>
+                  About
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/laptop#credits" title="Credits">
-                  <p className={classes.anchorlink3}>Credits</p>
-                </AnchorLink>
+              <div className={classes.anchorlink3}>
+                <Link
+                  to="credits_laptop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Credits
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/laptop#contact" title="Contact">
-                  <p className={classes.anchorlink4}>Contact</p>
-                </AnchorLink>
+              <div className={classes.anchorlink4}>
+                <Link
+                  to="contact_laptop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Contact
+                </Link>
               </div>
             </Toolbar>
           </AppBar>
@@ -252,7 +287,7 @@ const Laptop = () => {
               </div>
             </Box>
 
-            <AnchorLink to="/laptop#projects" title="Projects">
+            <Link to="project_laptop" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -262,18 +297,20 @@ const Laptop = () => {
               >
                 Projects
               </Button>
-            </AnchorLink>
+            </Link>
           </div>
           <Container></Container>
           <div className={classes.containers}>
-            <div id="projects"></div>
             <Container>
-              <div className={classes.mainHeading}>Projects</div>
+              <Element id="projects_laptop" name="projects_laptop">
+                <div className={classes.mainHeading}>Projects</div>
+              </Element>
+              <Element id="project_laptop" name="project_laptop"></Element>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>Feature Films</div>
+                <div className={classes.projectsTitle1}>Feature Films</div>
               </div>
             </Paper>
             <Container>
@@ -283,7 +320,7 @@ const Laptop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle2}>
                   Mini series ( 4 episodes)
                 </div>
               </div>
@@ -294,7 +331,7 @@ const Laptop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle3}>
                   Documentary series (13 episodes)
                 </div>
               </div>
@@ -305,7 +342,7 @@ const Laptop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle4}>
                   Childrens' series (6 episodes)
                 </div>
               </div>
@@ -313,23 +350,29 @@ const Laptop = () => {
             <Container>
               <Teddy />
             </Container>
-            <div id="about"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>About</div>
+              <Element id="about_laptop" name="about_laptop">
+                <div className={classes.mainHeading}>About</div>
+              </Element>
             </Container>
             <Container>
               <Trisha />
             </Container>
-            <div id="credits"></div>
+
             <Container>
-              <div className={classes.mainHeading}>Credits</div>
+              <Element id="credits_laptop" name="credits_laptop">
+                <div className={classes.mainHeading}>Credits</div>
+              </Element>
             </Container>
             <Container>
               <Credits />
             </Container>
-            <div id="contact"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>Contact</div>
+              <Element id="contact_laptop" name="contact_laptop">
+                <div className={classes.mainHeading}>Contact</div>
+              </Element>
             </Container>
 
             <Container>

@@ -1,6 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
-import ScrollableAnchor from "react-scrollable-anchor";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 import Ishallbe from "./ishallbe_m";
 import Repudiation from "./repudiation_m";
 import Power from "./power_m";
@@ -259,31 +258,43 @@ const Ipad = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                <Link
+                  to="projects_ipad"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#projects">Projects</a>
-                </MenuItem>
-
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
-                >
-                  <a href="#about">About</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
-                >
-                  <a href="#credits">Credits</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
-                >
-                  <a href="#contact">Contact</a>
-                </MenuItem>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Projects
+                  </MenuItem>
+                </Link>
+                <Link to="about_ipad" spy={true} smooth={true} duration={500}>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    About
+                  </MenuItem>
+                </Link>
+                <Link to="credits_ipad" spy={true} smooth={true} duration={500}>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Credits
+                  </MenuItem>
+                </Link>
+                <Link to="contact_ipad" spy={true} smooth={true} duration={500}>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Contact
+                  </MenuItem>
+                </Link>
               </Menu>
             </Toolbar>
           </AppBar>
@@ -302,7 +313,7 @@ const Ipad = () => {
               </div>
             </Box>
 
-            <a href="#projects">
+            <Link to="projects_ipad" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -312,13 +323,13 @@ const Ipad = () => {
               >
                 Projects
               </Button>
-            </a>
+            </Link>
 
             <div className={classes.containers}>
               <Container>
-                <ScrollableAnchor id={"projects"}>
+                <Element id="projects_ipad" name="projects_ipad">
                   <div className={classes.mainHeading}>Projects</div>
-                </ScrollableAnchor>
+                </Element>
               </Container>
               <Paper className={classes.projectsDivider} elevation={0}>
                 <div>
@@ -365,27 +376,27 @@ const Ipad = () => {
               </Container>
 
               <Container className={classes.mainHeading}>
-                <ScrollableAnchor id={"about"}>
+                <Element id="about_ipad" name="about_ipad">
                   <div className={classes.mainHeading}>About</div>
-                </ScrollableAnchor>
+                </Element>
               </Container>
               <Container>
                 <Trisha />
               </Container>
 
               <Container>
-                <ScrollableAnchor id={"credits"}>
+                <Element id="credits_ipad" name="credits_ipad">
                   <div className={classes.mainHeading}>Credits</div>
-                </ScrollableAnchor>
+                </Element>
               </Container>
               <Container>
                 <Credits />
               </Container>
 
               <Container className={classes.mainHeading}>
-                <ScrollableAnchor id={"contact"}>
+                <Element id="contact_ipad" name="contact_ipad">
                   <div className={classes.mainHeading}>Contact</div>
-                </ScrollableAnchor>
+                </Element>
               </Container>
 
               <Container>

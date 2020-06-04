@@ -1,6 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
-import ScrollableAnchor from "react-scrollable-anchor";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 import Ishallbe from "./ishallbe_s";
 import Repudiation from "./repudiation_s";
 import Power from "./power_s";
@@ -250,30 +249,53 @@ const Mobile = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                <Link
+                  to="projects_mobile"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#project">Projects</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Projects
+                  </MenuItem>
+                </Link>
+                <Link to="about_mobile" spy={true} smooth={true} duration={500}>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    About
+                  </MenuItem>
+                </Link>
+                <Link
+                  to="credits_mobile"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#about">About</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Credits
+                  </MenuItem>
+                </Link>
+                <Link
+                  to="contact_mobile"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#credits">Credits</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
-                >
-                  <a href="#contact">Contact</a>
-                </MenuItem>
+                  <MenuItem
+                    onClick={handleClose}
+                    className={classes.pulldownmenu}
+                  >
+                    Contact
+                  </MenuItem>
+                </Link>
               </Menu>
             </Toolbar>
           </AppBar>
@@ -292,7 +314,7 @@ const Mobile = () => {
               </div>
             </Box>
 
-            <a href="#project">
+            <Link to="projects_mobile" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -302,14 +324,14 @@ const Mobile = () => {
               >
                 Projects
               </Button>
-            </a>
+            </Link>
           </div>
           <Container></Container>
           <div className={classes.containers}>
             <Container>
-              <ScrollableAnchor id={"project"}>
+              <Element id="projects_mobile" name="projects_mobile">
                 <div className={classes.mainHeading}>Projects</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
@@ -356,27 +378,27 @@ const Mobile = () => {
             </Container>
             <div id="about"></div>
             <Container className={classes.mainHeading}>
-              <ScrollableAnchor id={"about"}>
+              <Element id="about_mobile" name="about_mobile">
                 <div className={classes.mainHeading}>About</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Container>
               <Trisha />
             </Container>
             <div id="credits"></div>
             <Container className={classes.mainHeading}>
-              <ScrollableAnchor id={"credits"}>
+              <Element id="credits_mobile" name="credits_mobile">
                 <div className={classes.mainHeading}>Credits</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Container>
               <Credits />
             </Container>
             <div id="contact"></div>
             <Container className={classes.mainHeading}>
-              <ScrollableAnchor id={"contact"}>
+              <Element id="contact_mobile" name="contact_mobile">
                 <div className={classes.mainHeading}>Contact</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
 
             <Container>

@@ -1,6 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
-import ScrollableAnchor from "react-scrollable-anchor";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 import Ishallbe from "./ishallbe_l";
 import Repudiation from "./repudiation_l";
 import Power from "./power_l";
@@ -12,12 +11,8 @@ import Contact from "./contact_l";
 import Footer from "./footer_l";
 import logo from "./images/euroart.png";
 import heroimage from "./images/hero_l.png";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import IconButton from "@material-ui/core/IconButton";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import MenuIcon from "@material-ui/icons/Menu";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import StarIcon from "@material-ui/icons/Star";
@@ -128,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     fontFamily: "KronaOne",
     lineHeight: "1.4",
-    textShadow: "3px 3px black",
+    textShadow: "2px 2px black",
   },
   mainHeading: {
     textAlign: "center",
@@ -200,20 +195,35 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "KronaOne",
     fontSize: "22px",
   },
+  anchorlink1: {
+    position: "relative",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    left: "20px",
+  },
+  anchorlink2: {
+    position: "relative",
+    fontFamily: "KronaOne",
+    fontSize: "18px",
+    left: "60px",
+  },
+  anchorlink3: {
+    position: "relative",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    left: "100px",
+  },
+  anchorlink4: {
+    position: "relative",
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    left: "140px",
+  },
 }));
 
 const Ipadpro = () => {
   const classes = useStyles();
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
@@ -223,16 +233,6 @@ const Ipadpro = () => {
         <div className={classes.root}>
           <AppBar position="fixed" className={classes.appbar}>
             <Toolbar>
-              <IconButton
-                edge="start"
-                className={classes.menuButton}
-                color="inherit"
-                aria-label="menu"
-                aria-haspopup="true"
-                onClick={handleClick}
-              >
-                <MenuIcon />
-              </IconButton>
               <div>
                 <Box>
                   <img
@@ -243,39 +243,46 @@ const Ipadpro = () => {
                   />
                 </Box>
               </div>
-              <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+              <div className={classes.anchorlink1}>
+                <Link
+                  to="projects_ipadpro"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#projects">Projects</a>
-                </MenuItem>
-
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                  Projects
+                </Link>
+              </div>
+              <div className={classes.anchorlink2}>
+                <Link
+                  to="about_ipadpro"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#about">About</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                  About
+                </Link>
+              </div>
+              <div className={classes.anchorlink3}>
+                <Link
+                  to="credits_ipadpro"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#credits">Credits</a>
-                </MenuItem>
-                <MenuItem
-                  onClick={handleClose}
-                  className={classes.pulldownmenu}
+                  Credits
+                </Link>
+              </div>
+              <div className={classes.anchorlink4}>
+                <Link
+                  to="contact_ipadpro"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
                 >
-                  <a href="#contact">Contact</a>
-                </MenuItem>
-              </Menu>
+                  Contact
+                </Link>
+              </div>
             </Toolbar>
           </AppBar>
 
@@ -293,7 +300,7 @@ const Ipadpro = () => {
               </div>
             </Box>
 
-            <a href="#projects">
+            <Link to="projects_ipadpro" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -303,14 +310,14 @@ const Ipadpro = () => {
               >
                 Projects
               </Button>
-            </a>
+            </Link>
           </div>
           <Container></Container>
           <div className={classes.containers}>
             <Container>
-              <ScrollableAnchor id={"projects"}>
+              <Element id="projects_ipadpro" name="projects_ipadpro">
                 <div className={classes.mainHeading}>Projects</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
@@ -357,27 +364,27 @@ const Ipadpro = () => {
             </Container>
 
             <Container className={classes.mainHeading}>
-              <ScrollableAnchor id={"about"}>
+              <Element id="about_ipadpro" name="about_ipadpro">
                 <div className={classes.mainHeading}>About</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Container>
               <Trisha />
             </Container>
 
             <Container>
-              <ScrollableAnchor id={"credits"}>
+              <Element id="credits)_ipadpro" name="credits_ipadpro">
                 <div className={classes.mainHeading}>Credits</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
             <Container>
               <Credits />
             </Container>
 
             <Container className={classes.mainHeading}>
-              <ScrollableAnchor id={"contact"}>
+              <Element id="contact_ipadpro" name="contact_ipadpro">
                 <div className={classes.mainHeading}>Contact</div>
-              </ScrollableAnchor>
+              </Element>
             </Container>
 
             <Container>
