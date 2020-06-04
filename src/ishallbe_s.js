@@ -72,13 +72,17 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   credits: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "14px",
     color: "#133B4D",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     textAlign: "left",
+  },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "30px",
   },
 }));
 

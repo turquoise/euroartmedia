@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -125,6 +124,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     paddingLeft: "40px",
     paddingRight: "40px",
+    textAlign: "left",
+  },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
   },
 }));
 
@@ -139,31 +143,37 @@ const Repudiation = () => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h6">REPUDIATION</Typography>
+        <div className={classes.projectTitle}>REPUDIATION</div>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke and Primavera Boman
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Director
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Waris Hussein
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke and Primavera Boman
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Director
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Waris Hussein
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
 
         <List>
           <Grid container spacing={0}>
@@ -195,9 +205,9 @@ const Repudiation = () => {
               height="360"
               title="Hilde Holger"
               src="https://www.youtube.com/embed/2HaUJC5ZGlU"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </CardMedia>

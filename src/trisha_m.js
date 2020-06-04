@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -109,6 +108,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     paddingLeft: "40px",
     paddingRight: "40px",
+    textAlign: "left",
+  },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
   },
 }));
 
@@ -123,8 +127,8 @@ const Trisha = () => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h6">TRISHA CLARKE</Typography>
-        <Typography variant="h6">Producer</Typography>
+        <div className={classes.projectTitle}>TRISHA CLARKE</div>
+        <div className={classes.projectTitle}>Producer</div>
       </CardContent>
       <CardContent>
         <List>

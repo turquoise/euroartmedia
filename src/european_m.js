@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -75,6 +74,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     paddingLeft: "40px",
     paddingRight: "40px",
+    textAlign: "left",
+  },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
   },
 }));
 
@@ -89,41 +93,49 @@ const European = () => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h6">EUROPEAN CAFES</Typography>
+        <div className={classes.projectTitle}>EUROPEAN CAFES</div>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Line Producer
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Kate Dain
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Presenters
+                </Paper>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper elevation={0} className={classes.credits}>
+                  Georgio Locatelli and Ulrika Jonsson
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Line Producer
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Kate Dain
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Presenters
-            </Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper elevation={0} className={classes.credits}>
-              Georgio Locatelli and Ulrika Jonsson
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
 
         <List>
           <Grid container spacing={0}>
