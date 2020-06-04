@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -40,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     backgroundColor: "white",
     color: "black",
-    height: "1000px",
+    height: "900px",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -93,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-320px",
     width: "640px",
     height: "360px",
+    marginTop: "50px",
   },
   right: {
     backgroundColor: "#e1f5fe",
@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     height: "200px",
     width: "200px",
@@ -147,6 +147,10 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "lightblue",
     borderWidth: "4px",
   },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
+  },
 }));
 
 const Teddy = () => {
@@ -155,7 +159,7 @@ const Teddy = () => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h6">TEDDY TALES</Typography>
+        <div className={classes.projectTitle}>TEDDY TALES</div>
       </CardContent>
 
       <CardContent>

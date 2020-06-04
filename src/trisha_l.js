@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -79,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "270px",
@@ -125,6 +124,10 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "lightgray",
     borderWidth: "4px",
   },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
+  },
 }));
 
 const Trisha = () => {
@@ -133,8 +136,8 @@ const Trisha = () => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h6">TRISHA CLARKE</Typography>
-        <Typography variant="h6">Producer</Typography>
+        <div className={classes.projectTitle}>TRISHA CLARKE</div>
+        <div className={classes.projectTitle}>Producer</div>
       </CardContent>
 
       <CardContent>

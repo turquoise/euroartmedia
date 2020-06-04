@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -16,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     backgroundColor: "white",
     color: "black",
-    height: "550px",
+    height: "580px",
   },
   cardImage: {
     height: "230px",
@@ -33,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "200px",
@@ -69,6 +68,10 @@ const useStyles = makeStyles((theme) => ({
     borderColor: "lightblue",
     borderWidth: "4px",
   },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
+  },
 }));
 
 const Ishallbe = () => {
@@ -77,60 +80,70 @@ const Ishallbe = () => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h6">I SHALL BE</Typography>
+        <div className={classes.projectTitle}>I SHALL BE</div>
       </CardContent>
 
       <CardContent>
-        <Grid container spacing={0}>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container spacing={0}>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Line Producer
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Kate Dain
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Director
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Keith Farrell
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Script
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Valerie Appel and Sarah Olley
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke
-            </Paper>
-          </Grid>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Line Producer
-            </Paper>
-          </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Kate Dain
-            </Paper>
-          </Grid>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Director
-            </Paper>
-          </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Keith Farrell
-            </Paper>
-          </Grid>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Script
-            </Paper>
-          </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Valerie Appel and Sarah Olley
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
       </CardContent>
 
       <CardContent>

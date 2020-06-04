@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Card from "@material-ui/core/Card";
@@ -96,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     height: "200px",
     width: "200px",
@@ -147,6 +146,10 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "10px",
     paddingRight: "10px",
   },
+  projectTitle: {
+    fontFamily: "Roboto",
+    fontSize: "28px",
+  },
 }));
 
 const Repudiation = () => {
@@ -155,35 +158,41 @@ const Repudiation = () => {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h6">REPUDIATION</Typography>
+        <div className={classes.projectTitle}>REPUDIATION</div>
       </CardContent>
       <CardContent>
-        <Grid container className={classes.root} spacing={0}>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Producer
-            </Paper>
+        <List>
+          <Grid container className={classes.root} spacing={0}>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Producer
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Trisha Clarke and Primavera Boman
+                </Paper>
+              </Grid>
+            </ListItem>
+            <ListItem>
+              <Grid item sm={3}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Director
+                </Paper>
+              </Grid>
+              <Grid item sm={1}></Grid>
+              <Grid item sm={4}>
+                <Paper elevation={0} className={classes.credits}>
+                  Waris Hussein
+                </Paper>
+              </Grid>
+            </ListItem>
           </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Trisha Clarke and Primavera Boman
-            </Paper>
-          </Grid>
-          <Grid item sm={3}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Director
-            </Paper>
-          </Grid>
-          <Grid item sm={1}></Grid>
-          <Grid item sm={4}>
-            <Paper elevation={0} className={classes.credits}>
-              Waris Hussein
-            </Paper>
-          </Grid>
-        </Grid>
+        </List>
       </CardContent>
       <CardContent>
         <Paper className={classes.cardImage} elevation={5}>

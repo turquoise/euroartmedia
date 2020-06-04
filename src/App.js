@@ -1,6 +1,7 @@
 import React from "react";
 import Mobile from "./Mobile";
 import Ipad from "./Ipad";
+import Ipadpro from "./Ipadpro";
 import "./App.css";
 
 function App() {
@@ -8,9 +9,7 @@ function App() {
     <div className="App">
       <Mobile />
       <Ipad />
-      <p className="test" id="ipadpro">
-        EUROART IPADPRO
-      </p>
+      <Ipadpro />
       <p className="test" id="laptop">
         EUROART LAPTOP
       </p>

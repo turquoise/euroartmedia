@@ -11,13 +11,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "12px",
   },
   copyrighticon: {
-    fontSize: "20px",
+    fontSize: "22px",
+    position: "relative",
+    left: "-450px",
   },
   copyrighttext: {
-    fontSize: "14px",
+    fontSize: "22px",
     position: "relative",
     top: "-28px",
-    left: "25px",
+    left: "-310px",
   },
 }));
 
