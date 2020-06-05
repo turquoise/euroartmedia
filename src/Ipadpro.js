@@ -16,8 +16,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import StarIcon from "@material-ui/icons/Star";
-import VideocamIcon from "@material-ui/icons/Videocam";
-import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
 import {
@@ -49,10 +47,22 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     color: "white",
     position: "absolute",
-    zIndex: "1",
-    top: "520px",
+    zIndex: "10",
+    top: "480px",
     left: "50%",
-    marginLeft: "-65px",
+    marginLeft: "-90px",
+    fontFamily: "KronaOne",
+    fontSize: "30px",
+    border: "2px solid white",
+    padding: "15px 35px",
+    textDecoration: "none",
+    cursor: "pointer",
+    borderRadius: "5px",
+
+    "&:hover": {
+      textShadow: "2px 2px #323232",
+      boxShadow: "3px 3px #323232",
+    },
   },
   textexpand: {
     marginLeft: "auto",
@@ -82,6 +92,7 @@ const useStyles = makeStyles((theme) => ({
     right: "15px",
     top: "12px",
     height: "35px",
+    cursor: "pointer",
   },
   divider: {
     position: "absolute",
@@ -123,7 +134,7 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     fontFamily: "KronaOne",
     lineHeight: "1.4",
-    textShadow: "2px 2px black",
+    textShadow: "2px 2px #323232",
   },
   mainHeading: {
     textAlign: "center",
@@ -200,24 +211,44 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "KronaOne",
     fontSize: "16px",
     left: "20px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink2: {
     position: "relative",
     fontFamily: "KronaOne",
     fontSize: "18px",
     left: "60px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink3: {
     position: "relative",
     fontFamily: "KronaOne",
     fontSize: "16px",
     left: "100px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink4: {
     position: "relative",
     fontFamily: "KronaOne",
     fontSize: "16px",
     left: "140px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
 }));
 
@@ -301,15 +332,7 @@ const Ipadpro = () => {
             </Box>
 
             <Link to="projects_ipadpro" spy={true} smooth={true} duration={500}>
-              <Button
-                color="primary"
-                variant="contained"
-                size="large"
-                className={classes.button}
-                startIcon={<VideocamIcon />}
-              >
-                Projects
-              </Button>
+              <div className={classes.button}>Projects</div>
             </Link>
           </div>
           <Container></Container>

@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import image from "./images/power_sm.png";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -138,6 +139,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto",
     fontSize: "28px",
   },
+  quotetext: {
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    color: "#133B4D",
+    lineHeight: "1.5",
+    marginTop: "-10px",
+  },
 }));
 
 const Power = () => {
@@ -151,47 +159,55 @@ const Power = () => {
 
       <CardContent>
         <List>
-          <Grid container className={classes.root} spacing={0}>
+          <Grid container spacing={0}>
             <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Producer
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Script
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Keith Lindsay
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Original book written by
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Anthony Rawstron
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Trisha Clarke
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Script
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Keith Lindsay
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Original book written by
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Anthony Rawstron
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A mini series about the rising power and downfall of a
+                        powerful family.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
             </ListItem>
           </Grid>

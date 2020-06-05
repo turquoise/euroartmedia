@@ -16,8 +16,6 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import StarIcon from "@material-ui/icons/Star";
-import VideocamIcon from "@material-ui/icons/Videocam";
-import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
 import {
@@ -54,9 +52,21 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "10",
-    top: "700px",
+    top: "600px",
     left: "50%",
-    marginLeft: "-80px",
+    marginLeft: "-100px",
+    fontFamily: "KronaOne",
+    fontSize: "34px",
+    border: "2px solid white",
+    padding: "20px 40px",
+    textDecoration: "none",
+    cursor: "pointer",
+    borderRadius: "5px",
+
+    "&:hover": {
+      textShadow: "2px 2px #323232",
+      boxShadow: "3px 3px #323232",
+    },
   },
   textexpand: {
     marginLeft: "auto",
@@ -76,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     right: "15px",
     top: "12px",
     height: "35px",
+    cursor: "pointer",
   },
   divider: {
     position: "absolute",
@@ -120,7 +131,7 @@ const useStyles = makeStyles((theme) => ({
     width: "800px",
     height: "500px",
     fontFamily: "KronaOne",
-    textShadow: "2px 2px black",
+    textShadow: "2px 2px #323232",
   },
   mainHeading: {
     textAlign: "center",
@@ -171,6 +182,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     top: "10px",
     left: "20px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink2: {
     position: "relative",
@@ -178,6 +194,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     top: "10px",
     left: "60px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink3: {
     position: "relative",
@@ -185,6 +206,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     top: "10px",
     left: "100px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   anchorlink4: {
     position: "relative",
@@ -192,6 +218,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     top: "10px",
     left: "140px",
+    cursor: "pointer",
+    color: "black",
+    "&:hover": {
+      textShadow: "2px 2px lightgray",
+    },
   },
   projectsTitle1: {
     position: "relative",
@@ -308,15 +339,7 @@ const Desktop = () => {
             </Box>
 
             <Link to="project_desktop" spy={true} smooth={true} duration={500}>
-              <Button
-                color="primary"
-                variant="contained"
-                size="large"
-                className={classes.button}
-                startIcon={<VideocamIcon />}
-              >
-                Projects
-              </Button>
+              <div className={classes.button}>Projects</div>
             </Link>
           </div>
           <Container></Container>

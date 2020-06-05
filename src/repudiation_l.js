@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent";
 import image from "./images/repudiation_bw_sm.png";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,16 +27,7 @@ const useStyles = makeStyles((theme) => ({
   textexpandopen: {
     marginLeft: "auto",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
+
   card: {
     backgroundColor: "white",
     color: "black",
@@ -150,6 +142,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto",
     fontSize: "28px",
   },
+  quotetext: {
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    color: "#133B4D",
+    lineHeight: "1.5",
+    marginTop: "-10px",
+  },
 }));
 
 const Repudiation = () => {
@@ -162,33 +161,46 @@ const Repudiation = () => {
       </CardContent>
       <CardContent>
         <List>
-          <Grid container className={classes.root} spacing={0}>
+          <Grid container spacing={0}>
             <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Producer
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke and Primavera Boman
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Director
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Waris Hussein
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Trisha Clarke and Primavera Boman
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Director
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Waris Hussein
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A film about Hilde Holger (1905 - 2001) who was one of
+                        the most influential and original dancers of the 20th
+                        Century.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
             </ListItem>
           </Grid>

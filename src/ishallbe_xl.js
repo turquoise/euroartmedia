@@ -176,7 +176,7 @@ const Ishallbe = () => {
         <List>
           <Grid container spacing={0}>
             <ListItem>
-              <Grid item lg={6}>
+              <Grid item xs={6}>
                 <Container>
                   <Grid container spacing={0}>
                     <Grid item xs={6}>
@@ -222,7 +222,7 @@ const Ishallbe = () => {
                   </Grid>
                 </Container>
               </Grid>
-              <Grid item lg={6}>
+              <Grid item xs={6}>
                 <Container>
                   <Grid container spacing={0}>
                     <Grid item xs={12}>

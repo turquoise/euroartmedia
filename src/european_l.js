@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import image from "./images/european_sm.png";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,6 +68,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto",
     fontSize: "28px",
   },
+  quotetext: {
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    color: "#133B4D",
+    lineHeight: "1.5",
+    marginTop: "-10px",
+  },
 }));
 
 const European = () => {
@@ -80,47 +88,56 @@ const European = () => {
 
       <CardContent>
         <List>
-          <Grid container className={classes.root} spacing={0}>
+          <Grid container spacing={0}>
             <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Producer
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Line Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Kate Dain
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Presenters
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Georgio Locatelli and Ulrika Jonsson
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Trisha Clarke
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Line Producer
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Kate Dain
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Presenters
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Georgio Locatelli and Ulrika Jonsson
-                </Paper>
+              <Grid item xs={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A documentary series with 13 episodes exploring the
+                        history and culture of the most enchanting European
+                        cafes.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
             </ListItem>
           </Grid>

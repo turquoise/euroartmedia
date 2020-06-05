@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import image from "./images/ishallbe_bw_s.png";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,6 +73,13 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto",
     fontSize: "28px",
   },
+  quotetext: {
+    fontFamily: "KronaOne",
+    fontSize: "16px",
+    color: "#133B4D",
+    lineHeight: "1.5",
+    marginTop: "-10px",
+  },
 }));
 
 const Ishallbe = () => {
@@ -87,65 +95,68 @@ const Ishallbe = () => {
         <List>
           <Grid container spacing={0}>
             <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Producer
-                </Paper>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Line Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Kate Dain
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Director
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Keith Farrell
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Script
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Valerie Appel and Sarah Olley
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Trisha Clarke
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Line Producer
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Kate Dain
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Director
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Keith Farrell
-                </Paper>
-              </Grid>
-            </ListItem>
-            <ListItem>
-              <Grid item sm={3}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Script
-                </Paper>
-              </Grid>
-              <Grid item sm={1}></Grid>
-              <Grid item sm={4}>
-                <Paper elevation={0} className={classes.credits}>
-                  Valerie Appel and Sarah Olley
-                </Paper>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A film about Regina Jonas, who overcame extraordinary
+                        difficulties and became the first female rabbi in 1936.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
             </ListItem>
           </Grid>
         </List>
       </CardContent>
-
       <CardContent>
         <Paper className={classes.cardImage} elevation={5}>
           <img src={image} className={classes.image} alt="Regina Jonas" />

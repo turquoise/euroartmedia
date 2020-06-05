@@ -19,8 +19,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import StarIcon from "@material-ui/icons/Star";
-import VideocamIcon from "@material-ui/icons/Videocam";
-import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import Footer from "./footer_m";
 
@@ -53,10 +51,22 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     color: "white",
     position: "absolute",
-    zIndex: "1",
-    top: "380px",
+    zIndex: "10",
+    top: "400px",
     left: "50%",
-    marginLeft: "-65px",
+    marginLeft: "-90px",
+    fontFamily: "KronaOne",
+    fontSize: "28px",
+    border: "2px solid white",
+    padding: "10px 30px",
+    textDecoration: "none",
+    cursor: "pointer",
+    borderRadius: "5px",
+
+    "&:hover": {
+      textShadow: "2px 2px #323232",
+      boxShadow: "3px 3px #323232",
+    },
   },
   textexpand: {
     marginLeft: "auto",
@@ -86,6 +96,7 @@ const useStyles = makeStyles((theme) => ({
     right: "15px",
     top: "12px",
     height: "35px",
+    cursor: "pointer",
   },
   divider: {
     position: "absolute",
@@ -127,7 +138,7 @@ const useStyles = makeStyles((theme) => ({
     height: "80px",
     fontFamily: "KronaOne",
     lineHeight: "1.4",
-    textShadow: "2px 2px black",
+    textShadow: "2px 2px #323232",
   },
   mainHeading: {
     textAlign: "center",
@@ -197,7 +208,7 @@ const useStyles = makeStyles((theme) => ({
   },
   pulldownmenu: {
     fontFamily: "KronaOne",
-    fontSize: "22px",
+    fontSize: "18px",
   },
   contact: {
     textAlign: "center",
@@ -314,15 +325,7 @@ const Ipad = () => {
             </Box>
 
             <Link to="projects_ipad" spy={true} smooth={true} duration={500}>
-              <Button
-                color="primary"
-                variant="contained"
-                size="large"
-                className={classes.button}
-                startIcon={<VideocamIcon />}
-              >
-                Projects
-              </Button>
+              <div className={classes.button}>Projects</div>
             </Link>
 
             <div className={classes.containers}>
