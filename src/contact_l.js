@@ -6,7 +6,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import contactimage from "./images/contact_xl.png";
+import contactimage from "./images/contact_xl_smaller.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {

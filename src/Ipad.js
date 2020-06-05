@@ -9,7 +9,7 @@ import Trisha from "./trisha_m";
 import Credits from "./credits_m";
 import Contact from "./contact_m";
 import logo from "./images/euroart.png";
-import heroimage from "./images/hero_l.png";
+import heroimage from "./images/hero_l_smaller.png";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import IconButton from "@material-ui/core/IconButton";

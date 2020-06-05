@@ -10,7 +10,7 @@ import Credits from "./credits_l";
 import Contact from "./contact_l";
 import Footer from "./footer_l";
 import logo from "./images/euroart.png";
-import heroimage from "./images/hero_l.png";
+import heroimage from "./images/hero_l_smaller.png";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
