@@ -286,8 +286,7 @@ const Laptop = () => {
                 modern ideas filmed internationally
               </div>
             </Box>
-
-            <Link to="project_laptop" spy={true} smooth={true} duration={500}>
+            <Link to="projects_laptop" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -305,7 +304,6 @@ const Laptop = () => {
               <Element id="projects_laptop" name="projects_laptop">
                 <div className={classes.mainHeading}>Projects</div>
               </Element>
-              <Element id="project_laptop" name="project_laptop"></Element>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>

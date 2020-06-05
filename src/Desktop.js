@@ -1,5 +1,5 @@
 import React from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 import Ishallbe from "./ishallbe_xl";
 import Repudiation from "./repudiation_xl";
 import Power from "./power_xl";
@@ -20,7 +20,6 @@ import VideocamIcon from "@material-ui/icons/Videocam";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 
-import "./styles.scss";
 import {
   createMuiTheme,
   makeStyles,
@@ -207,6 +206,10 @@ const useStyles = makeStyles((theme) => ({
 const Desktop = () => {
   const classes = useStyles();
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div id="desktop">
@@ -215,28 +218,53 @@ const Desktop = () => {
             <Toolbar>
               <div>
                 <Box>
-                  <img src={logo} className={classes.logo} alt="EuroArt logo" />
+                  <img
+                    src={logo}
+                    className={classes.logo}
+                    alt="EuroArt logo"
+                    onClick={scrollToTop}
+                  />
                 </Box>
               </div>
-              <div>
-                <AnchorLink to="/desktop#projects" title="Projects">
-                  <p className={classes.anchorlink1}>Projects</p>
-                </AnchorLink>
+              <div className={classes.anchorlink1}>
+                <Link
+                  to="projects_desktop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Projects
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/desktop#about" title="About">
-                  <p className={classes.anchorlink2}>About</p>
-                </AnchorLink>
+              <div className={classes.anchorlink2}>
+                <Link
+                  to="about_desktop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  About
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/desktop#credits" title="Credits">
-                  <p className={classes.anchorlink3}>Credits</p>
-                </AnchorLink>
+              <div className={classes.anchorlink3}>
+                <Link
+                  to="credits_desktop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Credits
+                </Link>
               </div>
-              <div>
-                <AnchorLink to="/desktop#contact" title="Contact">
-                  <p className={classes.anchorlink4}>Contact</p>
-                </AnchorLink>
+              <div className={classes.anchorlink4}>
+                <Link
+                  to="contact_desktop"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  Contact
+                </Link>
               </div>
             </Toolbar>
           </AppBar>
@@ -255,7 +283,7 @@ const Desktop = () => {
               </div>
             </Box>
 
-            <AnchorLink to="/desktop#projects" title="Projects">
+            <Link to="project_desktop" spy={true} smooth={true} duration={500}>
               <Button
                 color="primary"
                 variant="contained"
@@ -265,13 +293,15 @@ const Desktop = () => {
               >
                 Projects
               </Button>
-            </AnchorLink>
+            </Link>
           </div>
           <Container></Container>
           <div className={classes.containers}>
-            <div id="projects"></div>
             <Container>
-              <div className={classes.mainHeading}>Projects</div>
+              <Element id="projects_desktop" name="projects_desktop">
+                <div className={classes.mainHeading}>Projects</div>
+              </Element>
+              <Element id="project_desktop" name="project_desktop"></Element>
             </Container>
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
@@ -316,23 +346,29 @@ const Desktop = () => {
             <Container>
               <Teddy />
             </Container>
-            <div id="about"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>About</div>
+              <Element id="about_desktop" name="about_desktop">
+                <div className={classes.mainHeading}>About</div>
+              </Element>
             </Container>
             <Container>
               <Trisha />
             </Container>
-            <div id="credits"></div>
+
             <Container>
-              <div className={classes.mainHeading}>Credits</div>
+              <Element id="credits_desktop" name="credits_desktop">
+                <div className={classes.mainHeading}>Credits</div>
+              </Element>
             </Container>
             <Container>
               <Credits />
             </Container>
-            <div id="contact"></div>
+
             <Container className={classes.mainHeading}>
-              <div className={classes.mainHeading}>Contact</div>
+              <Element id="contact_desktop" name="contact_desktop">
+                <div className={classes.mainHeading}>Contact</div>
+              </Element>
             </Container>
 
             <Container>

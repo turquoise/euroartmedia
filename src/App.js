@@ -3,6 +3,7 @@ import Mobile from "./Mobile";
 import Ipad from "./Ipad";
 import Ipadpro from "./Ipadpro";
 import Laptop from "./Laptop";
+import Desktop from "./Desktop";
 import "./App.css";
 
 function App() {
@@ -12,9 +13,7 @@ function App() {
       <Ipad />
       <Ipadpro />
       <Laptop />
-      <p className="test" id="desktop">
-        EUROART DESKTOP
-      </p>
+      <Desktop />
     </div>
   );
 }
