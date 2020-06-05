@@ -27,16 +27,6 @@ const useStyles = makeStyles((theme) => ({
   textexpandopen: {
     marginLeft: "auto",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
   card: {
     backgroundColor: "white",
     color: "black",
@@ -99,12 +89,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-160px",
   },
   credits: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "14px",
     color: "#133B4D",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     position: "relative",
     top: "-30px",
     textAlign: "left",

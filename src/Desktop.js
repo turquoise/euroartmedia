@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     top: "600px",
     left: "50%",
     marginLeft: "-100px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "34px",
     border: "2px solid white",
     padding: "20px 40px",
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-280px",
     zIndex: "1",
     fontSize: "120px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     letterSpacing: "2px",
     color: "#59b",
   },
@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.4",
     width: "800px",
     height: "500px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     textShadow: "2px 2px #323232",
   },
   mainHeading: {
@@ -158,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-38px",
     marginLeft: "90px",
     fontSize: "24px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   iconbutton: {
@@ -173,12 +173,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   pulldownmenu: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "24px",
   },
   anchorlink1: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "18px",
     top: "10px",
     left: "20px",
@@ -190,7 +190,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink2: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "18px",
     top: "10px",
     left: "60px",
@@ -202,7 +202,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink3: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "18px",
     top: "10px",
     left: "100px",
@@ -214,7 +214,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink4: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "18px",
     top: "10px",
     left: "140px",
@@ -229,7 +229,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-440px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   projectsTitle2: {
@@ -245,7 +245,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-280px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   projectsTitle4: {
@@ -253,7 +253,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-320px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
 }));

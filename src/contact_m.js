@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   contact: {
     color: "black",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   contactphoto: {

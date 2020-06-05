@@ -87,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardcontent: {
     backgroundColor: "white",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   right: {
@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     paddingTop: "40px",
     paddingLeft: "40px",
@@ -111,12 +111,12 @@ const useStyles = makeStyles((theme) => ({
     left: "240px",
   },
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
     textAlign: "left",
   },
   title: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "28px",
     marginBottom: "0px",
   },

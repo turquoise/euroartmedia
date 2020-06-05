@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   image: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   grid: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     left: "240px",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
   },
   gridleft: {
@@ -70,11 +70,11 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "4px",
   },
   projectTitle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "28px",
   },
   quotetext: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     color: "#133B4D",
     lineHeight: "1.5",

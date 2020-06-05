@@ -7,7 +7,7 @@ import CopyrightIcon from "@material-ui/icons/Copyright";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "12px",
   },
   copyrighticon: {

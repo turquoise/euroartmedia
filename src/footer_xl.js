@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     left: "-580px",
   },
   copyrighttext: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     position: "relative",
     top: "-28px",

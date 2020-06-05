@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
   },
   list: {
@@ -65,11 +65,11 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "4px",
   },
   projectTitle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "28px",
   },
   quotetext: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     color: "#133B4D",
     lineHeight: "1.5",

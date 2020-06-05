@@ -26,16 +26,6 @@ const useStyles = makeStyles((theme) => ({
   textexpandopen: {
     marginLeft: "auto",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
   card: {
     backgroundColor: "white",
     color: "black",
@@ -86,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardcontent: {
     backgroundColor: "white",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   right: {
@@ -96,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     paddingTop: "40px",
     paddingLeft: "40px",
@@ -104,14 +94,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "40px",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     paddingLeft: "40px",
     paddingRight: "40px",
     textAlign: "left",
   },
   projectTitle: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "28px",
   },
 }));

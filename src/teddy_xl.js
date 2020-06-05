@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   media: {
@@ -90,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     paddingTop: "40px",
     paddingLeft: "40px",
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   list: {
@@ -123,7 +123,7 @@ const useStyles = makeStyles((theme) => ({
     left: "240px",
   },
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
     textAlign: "left",
   },
@@ -145,7 +145,7 @@ const useStyles = makeStyles((theme) => ({
     borderWidth: "4px",
   },
   title: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "30px",
     marginTop: "20px",
     marginLeft: "20px",
@@ -172,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     left: "-10px",
   },
   quotetext: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "20px",
     paddingTop: "0px",
     paddingLeft: "50px",

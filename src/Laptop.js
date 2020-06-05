@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-280px",
     zIndex: "1",
     fontSize: "120px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     letterSpacing: "2px",
     color: "#59b",
   },
@@ -124,12 +124,12 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.4",
     width: "800px",
     height: "500px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     textShadow: "2px 2px #323232",
   },
   mainHeading: {
     textAlign: "center",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "30px",
     marginBottom: "40px",
     marginTop: "5px",
@@ -150,7 +150,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-440px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   projectsTitle2: {
@@ -158,7 +158,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-360px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   projectsTitle3: {
@@ -166,7 +166,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-280px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   projectsTitle4: {
@@ -174,7 +174,7 @@ const useStyles = makeStyles((theme) => ({
     top: "-35px",
     left: "-320px",
     fontSize: "22px",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     color: "#133B4D",
   },
   iconbutton: {
@@ -194,12 +194,12 @@ const useStyles = makeStyles((theme) => ({
     left: "0px",
   },
   pulldownmenu: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "24px",
   },
   anchorlink1: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     left: "20px",
     cursor: "pointer",
@@ -210,7 +210,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink2: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     left: "60px",
     cursor: "pointer",
@@ -221,7 +221,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink3: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     left: "100px",
     cursor: "pointer",
@@ -232,7 +232,7 @@ const useStyles = makeStyles((theme) => ({
   },
   anchorlink4: {
     position: "relative",
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "16px",
     left: "140px",
     color: "black",

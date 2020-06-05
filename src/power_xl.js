@@ -24,16 +24,6 @@ const useStyles = makeStyles((theme) => ({
   textexpandopen: {
     marginLeft: "auto",
   },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
   card: {
     backgroundColor: "white",
     color: "black",
@@ -100,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   right: {
@@ -110,7 +100,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
     paddingTop: "40px",
     paddingLeft: "40px",
@@ -119,11 +109,11 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
   typography: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
     textAlign: "left",
   },
@@ -151,7 +141,7 @@ const useStyles = makeStyles((theme) => ({
     left: "240px",
   },
   quotetext: {
-    fontFamily: "KronaOne",
+    fontFamily: "KronaOne, Sans-Serif",
     fontSize: "20px",
     paddingTop: "0px",
     paddingLeft: "50px",
@@ -161,7 +151,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-10px",
   },
   title: {
-    fontFamily: "Roboto",
+    fontFamily: "Roboto, Sans-Serif",
     fontSize: "30px",
     marginTop: "20px",
     marginLeft: "20px",
