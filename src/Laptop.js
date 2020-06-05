@@ -16,9 +16,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
 import Paper from "@material-ui/core/Paper";
 import StarIcon from "@material-ui/icons/Star";
+import Box from "@material-ui/core/Box";
 import VideocamIcon from "@material-ui/icons/Videocam";
 import Button from "@material-ui/core/Button";
-import Box from "@material-ui/core/Box";
 
 import {
   createMuiTheme,
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     color: "white",
     position: "absolute",
-    zIndex: "1",
+    zIndex: "10",
     top: "600px",
     left: "50%",
     marginLeft: "-80px",

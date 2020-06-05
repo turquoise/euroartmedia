@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     color: "white",
     position: "absolute",
-    zIndex: "1",
+    zIndex: "10",
     top: "700px",
     left: "50%",
     marginLeft: "-80px",
@@ -63,16 +63,6 @@ const useStyles = makeStyles((theme) => ({
   },
   textexpandopen: {
     marginLeft: "auto",
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
   },
   card: {
     backgroundColor: "white",
@@ -96,11 +86,12 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "-5",
   },
   hero: {
-    position: "relative",
-    top: "58px",
+    position: "absolute",
+    top: "65px",
     zIndex: "-1",
     backgroundColor: "white",
     width: "1440px",
+    height: "auto",
     borderBottom: "18px solid #cd5c5c",
     left: "50%",
     marginLeft: "-720px",
@@ -112,27 +103,28 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-280px",
     zIndex: "1",
     fontSize: "120px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     letterSpacing: "2px",
     color: "#59b",
   },
   taglinetext: {
     position: "absolute",
     zIndex: "5",
-    color: "black",
+    color: "white",
     fontSize: "40px",
-    top: "240px",
+    top: "320px",
     left: "50%",
     marginLeft: "-380px",
     textAlign: "center",
     lineHeight: "1.4",
     width: "800px",
     height: "500px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
+    textShadow: "2px 2px black",
   },
   mainHeading: {
     textAlign: "center",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "32px",
     marginBottom: "40px",
     marginTop: "5px",
@@ -155,7 +147,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-38px",
     marginLeft: "90px",
     fontSize: "24px",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     color: "#133B4D",
   },
   iconbutton: {
@@ -166,37 +158,37 @@ const useStyles = makeStyles((theme) => ({
   },
   containers: {
     position: "relative",
-    top: "50px",
+    top: "990px",
   },
 
   pulldownmenu: {
-    fontFamily: "Rubik",
+    fontFamily: "KronaOne",
     fontSize: "24px",
   },
   anchorlink1: {
     position: "relative",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "18px",
     top: "10px",
     left: "20px",
   },
   anchorlink2: {
     position: "relative",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "18px",
     top: "10px",
     left: "60px",
   },
   anchorlink3: {
     position: "relative",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "18px",
     top: "10px",
     left: "100px",
   },
   anchorlink4: {
     position: "relative",
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "18px",
     top: "10px",
     left: "140px",
@@ -270,9 +262,9 @@ const Desktop = () => {
           </AppBar>
 
           <div>
-            <div>
+            <Container>
               <img src={heroimage} className={classes.hero} alt="Bath Canal" />
-            </div>
+            </Container>
 
             <Box>
               <div className={classes.euroart}>EuroArt</div>
