@@ -54,7 +54,13 @@ const useStyles = makeStyles((theme) => ({
     top: "-240px",
     left: "240px",
   },
-  typography: {
+  typography1: {
+    fontFamily: "Roboto, Sans-Serif",
+    fontSize: "20x",
+    position: "relative",
+    top: "-18px",
+  },
+  typography2: {
     fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
   },
@@ -168,7 +174,7 @@ const Ishallbe = () => {
           <Grid container spacing={3} className={classes.grid}>
             <ListItem>
               <Grid item sm={6} className={classes.gridleft}>
-                <p className={classes.typography}>
+                <p className={classes.typography1}>
                   A film about triumph in the face of impossible odds. It is a
                   story about family, community, love, hope and determination.
                   It is the story of Regina Jonas, who overcame prejudice and
@@ -177,7 +183,7 @@ const Ishallbe = () => {
                 </p>
               </Grid>
               <Grid item sm={6} className={classes.gridright}>
-                <p className={classes.typography}>
+                <p className={classes.typography2}>
                   The film follows Regina's struggle to be ordained as a rabbi
                   during the mid 1930s. Her quest to be ordained is set against
                   the context of the rise of the Nazi party. Despite the rise of

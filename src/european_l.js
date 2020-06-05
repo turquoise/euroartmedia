@@ -38,9 +38,15 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Roboto, Sans-Serif",
     fontSize: "20px",
   },
-  typography: {
+  typography1: {
     fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
+  },
+  typography2: {
+    fontFamily: "Roboto, Sans-Serif",
+    fontSize: "20x",
+    position: "relative",
+    top: "-11px",
   },
   list: {
     width: "700px",
@@ -155,7 +161,7 @@ const European = () => {
           <Grid container spacing={3} className={classes.grid}>
             <ListItem>
               <Grid item sm={6} className={classes.gridleft}>
-                <p className={classes.typography}>
+                <p className={classes.typography1}>
                   Series about the famous coffee houses in Europe 'my favourite
                   cafes are almost as dear to me as the places I have lived.'
                   Cafes are the window onto the world - you see ordinary people,
@@ -164,7 +170,7 @@ const European = () => {
                 </p>
               </Grid>
               <Grid item sm={6} className={classes.gridright}>
-                <p className={classes.typography}>
+                <p className={classes.typography2}>
                   When I go back to certain cities, 'I head for my favourite
                   cafes' Georgio Locatelli observes their food and wine while
                   discovering their history and culture. In Paris there is the

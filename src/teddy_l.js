@@ -118,7 +118,13 @@ const useStyles = makeStyles((theme) => ({
     top: "-240px",
     left: "240px",
   },
-  typography: {
+  typography1: {
+    fontFamily: "Roboto, Sans-Serif",
+    fontSize: "20x",
+    position: "relative",
+    top: "12px",
+  },
+  typography2: {
     fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
   },
@@ -230,7 +236,7 @@ const Teddy = () => {
           <Grid container spacing={3} className={classes.grid}>
             <ListItem>
               <Grid item sm={6} className={classes.gridleft}>
-                <p className={classes.typography}>
+                <p className={classes.typography1}>
                   Since the nineteen hundreds, teddies have had inside knowledge
                   about every single historical event. Teddy Tales is a series
                   of six stop frame animations featuring some of the most famous
@@ -238,7 +244,7 @@ const Teddy = () => {
                 </p>
               </Grid>
               <Grid item sm={6} className={classes.gridright}>
-                <p className={classes.typography}>
+                <p className={classes.typography2}>
                   Every tale will tell a little slice of history as witnessed by
                   each of these much loved teddy bears. These iconic teddies are
                   in one of the world's greatest private collections. The

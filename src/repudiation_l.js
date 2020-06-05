@@ -111,7 +111,13 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "40px",
     paddingBottom: "40px",
   },
-  typography: {
+  typography1: {
+    fontFamily: "Roboto, Sans-Serif",
+    fontSize: "20x",
+    position: "relative",
+    top: "14px",
+  },
+  typography2: {
     fontFamily: "Roboto, Sans-Serif",
     fontSize: "20x",
   },
@@ -216,7 +222,7 @@ const Repudiation = () => {
           <Grid container spacing={3} className={classes.grid}>
             <ListItem>
               <Grid item sm={6} className={classes.gridleft}>
-                <p className={classes.typography}>
+                <p className={classes.typography1}>
                   A film about the most influential and innovative dancer of the
                   20th Century, Hilde Holger (1905 - 2001) who transformed
                   modern dance forever. This is a film about dance itself
@@ -225,7 +231,7 @@ const Repudiation = () => {
                 </p>
               </Grid>
               <Grid item sm={6} className={classes.gridright}>
-                <p className={classes.typography}>
+                <p className={classes.typography2}>
                   We explore Hilde's life using dramatized moments in Nazi
                   occupied Vienna, 'scandalous' dances on Mumbai's Juhu beach,
                   and her dance school for all ages and abilities. This
