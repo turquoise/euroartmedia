@@ -14,9 +14,10 @@ const useStyles = makeStyles((theme) => ({
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
     marginTop: "0px",
+    textAlign: "left",
   },
 }));
 

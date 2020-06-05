@@ -15,14 +15,14 @@ const useStyles = makeStyles((theme) => ({
   copyrighticon: {
     fontSize: "20px",
     position: "relative",
-    left: "120px",
+    left: "-580px",
   },
   copyrighttext: {
-    fontFamily: "roboto",
-    fontSize: "18px",
+    fontFamily: "Roboto",
+    fontSize: "20px",
     position: "relative",
     top: "-28px",
-    left: "150px",
+    left: "-450px",
   },
 }));
 

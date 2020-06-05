@@ -7,6 +7,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import image from "./images/european_sm.png";
 import image2 from "./images/european_right.png";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "auto",
     marginLeft: "auto",
     marginRight: "auto",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
     paddingTop: "40px",
     paddingLeft: "40px",
@@ -67,41 +69,43 @@ const useStyles = makeStyles((theme) => ({
     width: "230px",
     backgroundColor: "white",
     position: "relative",
+    left: "-10px",
   },
   cardImage2: {
     height: "230px",
     width: "230px",
     backgroundColor: "white",
     position: "relative",
-    left: "55px",
+    left: "60px",
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "200px",
   },
   image2: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "200px",
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20x",
+    textAlign: "left",
   },
   list: {
     width: "700px",
@@ -115,7 +119,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "10px",
   },
   quotetext: {
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "20px",
     paddingTop: "0px",
     paddingLeft: "50px",
@@ -136,10 +140,10 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     paddingTop: "10px",
     backgroundColor: "#e1f5fe",
-    width: "355px",
-    height: "240px",
-    borderRight: "3px solid lightblue",
-    left: "-58px",
+    width: "300px",
+    height: "220px",
+    borderRight: "4px solid lightblue",
+    left: "-50px",
   },
   paperright: {
     position: "relative",
@@ -147,8 +151,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     paddingTop: "10px",
     backgroundColor: "#e1f5fe",
-    width: "355px",
-    height: "240px",
+    width: "300px",
+    height: "220px",
     left: "-10px",
   },
 }));
@@ -163,60 +167,65 @@ const European = () => {
       </CardContent>
 
       <CardContent>
-        <Grid container spacing={0}>
-          <Grid item lg={6}>
-            <Container>
-              <Grid container spacing={0}>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Producer
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Trisha Clarke
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Line Producer
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Kate Dain
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Presenters
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Georgio Locatelli and Ulrika Jonsson
-                  </Paper>
-                </Grid>
+        <List>
+          <Grid container spacing={0}>
+            <ListItem>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Line Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Kate Dain
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Presenters
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Georgio Locatelli and Ulrika Jonsson
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-            </Container>
-          </Grid>
-          <Grid item lg={6}>
-            <Container>
-              <Grid container spacing={0}>
-                <Grid item xs={12}>
-                  <p className={classes.quotetext}>
-                    A documentary series with 13 episodes exploring the history
-                    and culture of the most enchanting European cafes.
-                  </p>
-                </Grid>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A documentary series with 13 episodes exploring the
+                        history and culture of the most enchanting European
+                        cafes.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-            </Container>
+            </ListItem>
           </Grid>
-        </Grid>
+        </List>
       </CardContent>
 
       <CardContent>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           <Grid item sm={3}>
             <Paper className={classes.cardImage} elevation={5}>
               <img src={image} className={classes.image} alt="European Cafe" />

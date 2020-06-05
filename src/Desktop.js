@@ -151,8 +151,8 @@ const useStyles = makeStyles((theme) => ({
     color: "#133B4D",
   },
   iconbutton: {
-    marginLeft: "40px",
-    marginTop: "3px",
+    position: "relative",
+    left: "-580px",
     color: "#cd5c5c",
     fontSize: "36px",
   },
@@ -192,6 +192,38 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     top: "10px",
     left: "140px",
+  },
+  projectsTitle1: {
+    position: "relative",
+    top: "-35px",
+    left: "-440px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle2: {
+    position: "relative",
+    top: "-35px",
+    left: "-360px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle3: {
+    position: "relative",
+    top: "-35px",
+    left: "-280px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
+  },
+  projectsTitle4: {
+    position: "relative",
+    top: "-35px",
+    left: "-320px",
+    fontSize: "22px",
+    fontFamily: "KronaOne",
+    color: "#133B4D",
   },
 }));
 
@@ -298,7 +330,7 @@ const Desktop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>Feature Films</div>
+                <div className={classes.projectsTitle1}>Feature Films</div>
               </div>
             </Paper>
             <Container>
@@ -308,7 +340,7 @@ const Desktop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle2}>
                   Mini series ( 4 episodes)
                 </div>
               </div>
@@ -319,7 +351,7 @@ const Desktop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle3}>
                   Documentary series (13 episodes)
                 </div>
               </div>
@@ -330,7 +362,7 @@ const Desktop = () => {
             <Paper className={classes.projectsDivider} elevation={0}>
               <div>
                 <StarIcon className={classes.iconbutton} aria-label="icon" />
-                <div className={classes.projectsTitle}>
+                <div className={classes.projectsTitle4}>
                   Childrens' series (6 episodes)
                 </div>
               </div>

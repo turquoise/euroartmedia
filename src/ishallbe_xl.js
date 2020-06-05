@@ -7,6 +7,8 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import image from "./images/ishallbe_bw_s.png";
 import image2 from "./images/ishallbe_right_bw.png";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,27 +51,28 @@ const useStyles = makeStyles((theme) => ({
     width: "230px",
     backgroundColor: "white",
     position: "relative",
+    left: "-10px",
   },
   cardImage2: {
     height: "230px",
     width: "230px",
     backgroundColor: "white",
     position: "relative",
-    left: "55px",
+    left: "60px",
   },
   button: {
     backgroundColor: "cd5c5c",
     color: "white",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "40px",
   },
   cardcontent: {
     backgroundColor: "#e1f5fe",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
   },
   gridtext: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "14px",
   },
   right: {
@@ -88,21 +91,21 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "200px",
   },
   image2: {
     position: "relative",
-    left: "15px",
+    left: "0px",
     top: "15px",
     width: "200px",
     height: "200px",
   },
   credits: {
     color: "#133B4D",
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20px",
   },
   grid: {
@@ -117,11 +120,12 @@ const useStyles = makeStyles((theme) => ({
     left: "250px",
   },
   typography: {
-    fontFamily: "roboto",
+    fontFamily: "Roboto",
     fontSize: "20x",
+    textAlign: "left",
   },
   quotetext: {
-    fontFamily: "Krona One",
+    fontFamily: "KronaOne",
     fontSize: "20px",
     paddingTop: "0px",
     paddingLeft: "50px",
@@ -142,10 +146,10 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     paddingTop: "10px",
     backgroundColor: "#e1f5fe",
-    width: "355px",
-    height: "240px",
-    borderRight: "3px solid lightblue",
-    left: "-58px",
+    width: "300px",
+    height: "220px",
+    borderRight: "4px solid lightblue",
+    left: "-50px",
   },
   paperright: {
     position: "relative",
@@ -153,8 +157,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "20px",
     paddingTop: "10px",
     backgroundColor: "#e1f5fe",
-    width: "355px",
-    height: "240px",
+    width: "300px",
+    height: "220px",
     left: "-10px",
   },
 }));
@@ -169,70 +173,74 @@ const Ishallbe = () => {
       </CardContent>
 
       <CardContent>
-        <Grid container spacing={0}>
-          <Grid item lg={6}>
-            <Container>
-              <Grid container spacing={0}>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Producer
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Trisha Clarke
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Line Producer
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Kate Dain
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Director
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Keith Farrell
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Script
-                  </Paper>
-                </Grid>
-                <Grid item xs={6}>
-                  <Paper elevation={0} className={classes.credits}>
-                    Valerie Appel and Sarah Olley
-                  </Paper>
-                </Grid>
+        <List>
+          <Grid container spacing={0}>
+            <ListItem>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Trisha Clarke
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Line Producer
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Kate Dain
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Director
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Keith Farrell
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Script
+                      </Paper>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Paper elevation={0} className={classes.credits}>
+                        Valerie Appel and Sarah Olley
+                      </Paper>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-            </Container>
-          </Grid>
-          <Grid item lg={6}>
-            <Container>
-              <Grid container spacing={0}>
-                <Grid item xs={12}>
-                  <p className={classes.quotetext}>
-                    A film about Regina Jonas, who overcame extraordinary
-                    difficulties and became the first female rabbi in 1936.
-                  </p>
-                </Grid>
+              <Grid item lg={6}>
+                <Container>
+                  <Grid container spacing={0}>
+                    <Grid item xs={12}>
+                      <p className={classes.quotetext}>
+                        A film about Regina Jonas, who overcame extraordinary
+                        difficulties and became the first female rabbi in 1936.
+                      </p>
+                    </Grid>
+                  </Grid>
+                </Container>
               </Grid>
-            </Container>
+            </ListItem>
           </Grid>
-        </Grid>
+        </List>
       </CardContent>
 
       <CardContent>
-        <Grid container spacing={3}>
+        <Grid container spacing={2}>
           <Grid item sm={3}>
             <Paper className={classes.cardImage} elevation={5}>
               <img src={image} className={classes.image} alt="Regina Jonas" />
