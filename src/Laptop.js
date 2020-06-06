@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "10",
-    top: "580px",
+    top: "500px",
     left: "50%",
     marginLeft: "-120px",
     fontFamily: "KronaOne",
