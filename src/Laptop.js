@@ -10,7 +10,7 @@ import Credits from "./credits_xl";
 import Contact from "./contact_xl";
 import Footer from "./footer_xl";
 import logo from "./images/euroart.png";
-import heroimage from "./images/hero_l_smaller.png";
+import heroimage from "./images/euroarthero_smaller.png";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "10",
-    top: "500px",
+    top: "320px",
     left: "50%",
     marginLeft: "-120px",
     fontFamily: "KronaOne",
@@ -103,11 +103,11 @@ const useStyles = makeStyles((theme) => ({
   },
   euroart: {
     position: "absolute",
-    top: "110px",
+    top: "80px",
     left: "50%",
-    marginLeft: "-280px",
+    marginLeft: "-230px",
     zIndex: "1",
-    fontSize: "120px",
+    fontSize: "100px",
     fontFamily: "KronaOne, Sans-Serif",
     letterSpacing: "2px",
     color: "#59b",
@@ -116,8 +116,8 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: "5",
     color: "white",
-    fontSize: "40px",
-    top: "260px",
+    fontSize: "38px",
+    top: "190px",
     left: "50%",
     marginLeft: "-380px",
     textAlign: "center",

@@ -10,7 +10,7 @@ import Credits from "./credits_xl";
 import Contact from "./contact_xl";
 import Footer from "./footer_xl";
 import logo from "./images/euroart.png";
-import heroimage from "./images/hero_l_smaller.png";
+import heroimage from "./images/euroarthero_smaller.png";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
@@ -52,10 +52,10 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "10",
-    top: "600px",
+    top: "320px",
     left: "50%",
-    marginLeft: "-100px",
-    fontFamily: "KronaOne, Sans-Serif",
+    marginLeft: "-120px",
+    fontFamily: "KronaOne",
     fontSize: "34px",
     border: "2px solid white",
     padding: "20px 40px",
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
   },
   hero: {
     position: "absolute",
-    top: "65px",
+    top: "68px",
     zIndex: "-1",
     backgroundColor: "white",
     width: "1440px",
@@ -109,11 +109,11 @@ const useStyles = makeStyles((theme) => ({
   },
   euroart: {
     position: "absolute",
-    top: "170px",
+    top: "80px",
     left: "50%",
-    marginLeft: "-280px",
+    marginLeft: "-230px",
     zIndex: "1",
-    fontSize: "120px",
+    fontSize: "100px",
     fontFamily: "KronaOne, Sans-Serif",
     letterSpacing: "2px",
     color: "#59b",
@@ -122,8 +122,8 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     zIndex: "5",
     color: "white",
-    fontSize: "40px",
-    top: "320px",
+    fontSize: "38px",
+    top: "190px",
     left: "50%",
     marginLeft: "-380px",
     textAlign: "center",
@@ -169,7 +169,7 @@ const useStyles = makeStyles((theme) => ({
   },
   containers: {
     position: "relative",
-    top: "990px",
+    top: "550px",
   },
 
   pulldownmenu: {
