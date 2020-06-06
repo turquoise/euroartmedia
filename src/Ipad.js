@@ -57,15 +57,19 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "-90px",
     fontFamily: "KronaOne, Sans-Serif",
     fontSize: "28px",
-    border: "2px solid white",
+    border: "4px solid white",
     padding: "10px 30px",
     textDecoration: "none",
     cursor: "pointer",
     borderRadius: "5px",
+    textShadow: "3px 3px #323232",
+    boxShadow: "3px 3px #323232",
 
     "&:hover": {
-      textShadow: "2px 2px #323232",
+      textShadow: "3px 3px #323232",
       boxShadow: "3px 3px #323232",
+      color: "#59b",
+      border: "4px solid #59b",
     },
   },
   textexpand: {

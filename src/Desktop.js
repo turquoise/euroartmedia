@@ -10,7 +10,7 @@ import Credits from "./credits_xl";
 import Contact from "./contact_xl";
 import Footer from "./footer_xl";
 import logo from "./images/euroart.png";
-import heroimage from "./images/euroarthero_smaller.png";
+import heroimage from "./images/heroimage_smaller.png";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Container from "@material-ui/core/Container";
@@ -52,20 +52,24 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     position: "absolute",
     zIndex: "10",
-    top: "320px",
+    top: "350px",
     left: "50%",
     marginLeft: "-120px",
     fontFamily: "KronaOne",
     fontSize: "34px",
-    border: "2px solid white",
+    border: "4px solid white",
     padding: "20px 40px",
     textDecoration: "none",
     cursor: "pointer",
     borderRadius: "5px",
+    textShadow: "3px 3px #323232",
+    boxShadow: "3px 3px #323232",
 
     "&:hover": {
-      textShadow: "2px 2px #323232",
+      textShadow: "3px 3px #323232",
       boxShadow: "3px 3px #323232",
+      color: "#59b",
+      border: "4px solid #59b",
     },
   },
   textexpand: {
@@ -169,7 +173,7 @@ const useStyles = makeStyles((theme) => ({
   },
   containers: {
     position: "relative",
-    top: "550px",
+    top: "720px",
   },
 
   pulldownmenu: {
