@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "20px",
     marginTop: "0px",
   },
+  link: {
+    color: "black",
+  },
 }));
 
 const Credits = () => {
@@ -75,7 +78,24 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Keith Farrell (I Shall Be), Waris Hussein (Repudiation)
+                  <a
+                    href="https://www.imdb.com/name/nm1686849/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Keith Farrell
+                  </a>{" "}
+                  (I Shall Be), {""}
+                  <a
+                    href="https://www.imdb.com/name/nm0404014/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Waris Hussein
+                  </a>{" "}
+                  (Repudiation)
                 </Paper>
               </Grid>
             </ListItem>
@@ -87,7 +107,15 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Cadi Catlow (Teddy Tales)
+                  <a
+                    href="https://www.cadicatlow.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Cadi Catlow
+                  </a>{" "}
+                  (Teddy Tales)
                 </Paper>
               </Grid>
             </ListItem>
@@ -111,8 +139,34 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Valeria Appell and Sarah Olley (I Shall Be), Keith Lindsay
-                  (The Impotence of Power), Larry Barker (Teddy Tales)
+                  Valeria Appell and {""}
+                  <a
+                    href="http://www.scriptsurgery.co.uk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Sarah Olley
+                  </a>{" "}
+                  (I Shall Be),
+                  <a
+                    href="http://www.futermanrose.co.uk/lindsay.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Keith Lindsay
+                  </a>{" "}
+                  (The Impotence of Power),
+                  <a
+                    href="https://www.larry-barker.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Larry Barker
+                  </a>{" "}
+                  (Teddy Tales)
                 </Paper>
               </Grid>
             </ListItem>
@@ -124,7 +178,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Colm Whelan
+                  <a
+                    href="https://www.imdb.com/name/nm1372437/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Colm Whelan
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -148,7 +209,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Paddy Payne
+                  <a
+                    href="https://www.thetalentmanager.com/talent/14530/paddy-payne"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Paddy Payne
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -160,7 +228,15 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Lisa Caldognetto, Patsy Giles (Ireland)
+                  <a
+                    href="https://lisacaldognetto.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Lisa Caldognetto
+                  </a>{" "}
+                  , Patsy Giles (Ireland)
                 </Paper>
               </Grid>
             </ListItem>
@@ -196,7 +272,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Monica Gosschalk
+                  <a
+                    href="https://monicagosschalk.com/profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Monica Gosschalk
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -306,7 +389,7 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Shabana and Mohammed Querschi
+                  Shabana and Mohammed Qureschi
                 </Paper>
               </Grid>
             </ListItem>
@@ -342,7 +425,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Mathew Meadows
+                  <a
+                    href="http://meadowsmatthew.wixsite.com/storyboards/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Mathew Meadows
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -390,7 +480,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  David Bryan
+                  <a
+                    href="https://www.davidbryandesigner.co.uk/about"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    David Bryan
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -450,7 +547,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  Elaine Ford
+                  <a
+                    href="https://www.stuntproducer.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    Elaine Ford
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
@@ -498,7 +602,14 @@ const Credits = () => {
               </Grid>
               <Grid item sm={6}>
                 <Paper elevation={0} className={classes.credits}>
-                  David Cornwall, Scorpion TV
+                  <a
+                    href="http://scorpiontv.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={classes.link}
+                  >
+                    David Cornwall, Scorpion TV
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>

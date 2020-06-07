@@ -22,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "auto",
   },
+  link: {
+    color: "black",
+  },
 }));
 
 const Contact = () => {
@@ -69,7 +72,12 @@ const Contact = () => {
               </Grid>
               <Grid item xs={8}>
                 <Paper elevation={0} className={classes.contact}>
-                  euroart1@btinternet.com
+                  <a
+                    href="mailto:euroart1@btinternet.com?subject=Email from your website"
+                    className={classes.link}
+                  >
+                    euorart1@btinternet.com
+                  </a>
                 </Paper>
               </Grid>
             </ListItem>
